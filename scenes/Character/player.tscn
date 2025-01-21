@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://der2vkgodjguf"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_g1jfu"]
+[ext_resource type="Texture2D" uid="uid://cm6hxfh67mp1o" path="res://assets/sprites/hamster/hamster_prota_outlined.png" id="2_241fx"]
+[ext_resource type="PackedScene" uid="uid://buasjj12oodhn" path="res://scenes/Character/gun.tscn" id="3_ai8wl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqpgm"]
+atlas = ExtResource("2_241fx")
+region = Rect2(0, 0, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktlcn"]
+atlas = ExtResource("2_241fx")
+region = Rect2(95, 0, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43ljv"]
+atlas = ExtResource("2_241fx")
+region = Rect2(190, 0, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0tdi"]
+atlas = ExtResource("2_241fx")
+region = Rect2(285, 0, 95, 95)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_anf7l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqpgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktlcn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43ljv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0tdi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snm2j"]
+radius = 15.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(-3, -95)
+scale = Vector2(2.4, 2.4)
+script = ExtResource("1_g1jfu")
+
+[node name="Gun" parent="." instance=ExtResource("3_ai8wl")]
+position = Vector2(1.25, 23.75)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 21)
+scale = Vector2(0.393421, 0.393421)
+sprite_frames = SubResource("SpriteFrames_anf7l")
+autoplay = "default"
+frame_progress = 0.620331
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 24)
+shape = SubResource("CircleShape2D_snm2j")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1.25, 13.3333)
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true

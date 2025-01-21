@@ -9,15 +9,14 @@ script = ExtResource("1_kin24")
 
 [node name="BUBBLE_2" type="Sprite2D" parent="."]
 position = Vector2(2.38419e-07, 2.38419e-07)
-scale = Vector2(0.515625, 0.515625)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_rm4g2")
 
 [node name="BUBBLE_1" type="Sprite2D" parent="."]
-scale = Vector2(0.5625, 0.5625)
+scale = Vector2(1.25, 1.25)
 texture = ExtResource("2_qvwlk")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-visible = false
 position = Vector2(-2, -3)
 scale = Vector2(4.15, 3.7)
 

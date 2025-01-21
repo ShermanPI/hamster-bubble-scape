@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://so53wy6gbmb"
-path="res://.godot/imported/bouncing_ball.png-8eedb49a3ef4ffb1e9f3094ded7a25a8.ctex"
+uid="uid://cm6hxfh67mp1o"
+path="res://.godot/imported/hamster_prota_outlined.png-4664b6ff231b98bd369a3ddfc4a796f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bouncing_ball.png"
-dest_files=["res://.godot/imported/bouncing_ball.png-8eedb49a3ef4ffb1e9f3094ded7a25a8.ctex"]
+source_file="res://assets/sprites/hamster/hamster_prota_outlined.png"
+dest_files=["res://.godot/imported/hamster_prota_outlined.png-4664b6ff231b98bd369a3ddfc4a796f8.ctex"]
 
 [params]
 

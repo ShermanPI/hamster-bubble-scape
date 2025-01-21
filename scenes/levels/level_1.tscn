@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkls4mtfw6tkb"]
+
+[ext_resource type="PackedScene" uid="uid://der2vkgodjguf" path="res://scenes/Character/player.tscn" id="1_gmk1m"]
+[ext_resource type="Texture2D" uid="uid://cwaknkhgshjd" path="res://icon.svg" id="2_bn8vk"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ljap2"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_gmk1m")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-6, -73)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(4, 78)
+shape = SubResource("WorldBoundaryShape2D_ljap2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(15, 69)
+scale = Vector2(5.49219, 1)
+texture = ExtResource("2_bn8vk")
