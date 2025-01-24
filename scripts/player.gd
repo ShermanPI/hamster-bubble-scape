@@ -26,6 +26,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("fire") and !is_on_floor():
 		var mouse_position = get_global_mouse_position()
 		var direction_vector = (global_position - mouse_position).normalized()
-		velocity = direction_vector * SPEED * 1.4
+		velocity = direction_vector * SPEED
 
 	move_and_slide()
