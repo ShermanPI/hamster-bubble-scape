@@ -2,7 +2,7 @@ extends Node2D
 
 const BULLET = preload("res://scenes/Character/bullet.tscn")
 @onready var muzzle: Marker2D = $Marker2D
-@onready var game_manager = get_node("/root/Level1/GameManager")
+@onready var game_manager = get_node("/root/Level2/GameManager")
 
 var total_bullets = 12     # Número total de balas a disparar
 var spread_angle = 65     # Apertura del tiro en grados (puedes modificarla)

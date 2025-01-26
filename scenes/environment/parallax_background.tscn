@@ -14,7 +14,7 @@ motion_scale = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="sky2"]
 position = Vector2(0, -9)
-scale = Vector2(1.19792, 1.19792)
+scale = Vector2(1.89062, 1.89063)
 texture = ExtResource("1_iuxb1")
 centered = false
 
