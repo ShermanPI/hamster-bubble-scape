@@ -9,7 +9,6 @@ script = ExtResource("1_kin24")
 
 [node name="BUBBLE_2" type="Sprite2D" parent="."]
 position = Vector2(2.38419e-07, 2.38419e-07)
-scale = Vector2(1, 1)
 texture = ExtResource("2_rm4g2")
 
 [node name="BUBBLE_1" type="Sprite2D" parent="."]
