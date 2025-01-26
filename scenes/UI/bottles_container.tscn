@@ -1,9 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckdn4lavkpdeb"]
+[gd_scene load_steps=3 format=3 uid="uid://ckdn4lavkpdeb"]
 
 [ext_resource type="Script" path="res://scripts/bottles_container.gd" id="1_b7pti"]
 
-[node name="BottlesContainer" type="HBoxContainer"]
-offset_right = 40.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nypjh"]
+bg_color = Color(0, 0, 0, 0.372549)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="BottlesContainer" type="Panel"]
+custom_minimum_size = Vector2(120, 68)
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 180.0
+offset_bottom = 83.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nypjh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 10.0
+offset_right = 10.0
 offset_bottom = 40.0
-theme_override_constants/separation = 16
 script = ExtResource("1_b7pti")

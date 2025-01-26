@@ -54,6 +54,6 @@ func _physics_process(delta: float) -> void:
 		if (player_shots > 0  and !is_on_floor()):
 			var mouse_position = get_global_mouse_position()
 			var direction_vector = (global_position - mouse_position).normalized()
-			velocity = direction_vector * SPEED * 5
+			velocity = direction_vector * SPEED * 2
 
 	move_and_slide()
