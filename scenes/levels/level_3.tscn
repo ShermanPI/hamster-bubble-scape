@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dwyjvopq6lwyv"]
+[gd_scene load_steps=15 format=4 uid="uid://dwyjvopq6lwyv"]
 
 [ext_resource type="Script" path="res://scenes/levels/scripts/level_3.gd" id="1_cb5ke"]
 [ext_resource type="Texture2D" uid="uid://d3goq537iket5" path="res://assets/levels/level03.png" id="1_fg75q"]
@@ -968,6 +968,9 @@ sources/0 = SubResource("TileSetAtlasSource_g0n56")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qf8qa"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_befgt"]
+size = Vector2(75, 12)
+
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_cb5ke")
 
@@ -1022,3 +1025,12 @@ position = Vector2(1464, 11)
 [node name="NextLevel" parent="." instance=ExtResource("9_knnym")]
 position = Vector2(1962, -18)
 collision_mask = 2
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(545.5, 73)
+shape = SubResource("RectangleShape2D_befgt")
+
+[connection signal="body_entered" from="StaticBody2D" to="." method="_on_static_body_2d_body_entered"]
