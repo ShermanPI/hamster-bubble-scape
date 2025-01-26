@@ -26,10 +26,10 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("fire"):
 		var player_shots = game_manager.bubble_bottles
-		game_manager.remove_bubble_bottle()
+
 		if(player_shots > 0):
 			var mouse_position = get_global_mouse_position()
 			var direction_vector = (global_position - mouse_position).normalized()
-			velocity = direction_vector * SPEED * 2
+			velocity = direction_vector * SPEED * 1.2
 	
 	move_and_slide()

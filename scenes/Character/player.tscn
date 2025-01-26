@@ -76,7 +76,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_snm2j"]
-radius = 7.92762
+radius = 2.95209
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(-3, -155)
@@ -85,15 +85,15 @@ collision_layer = 2
 script = ExtResource("1_g1jfu")
 
 [node name="Gun" parent="." instance=ExtResource("3_ai8wl")]
-position = Vector2(1.25, 22.5)
+position = Vector2(0.590419, 27.3561)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, 21)
-scale = Vector2(0.205263, 0.205263)
+position = Vector2(0.57445, 26.7497)
+scale = Vector2(0.0783863, 0.0783863)
 sprite_frames = SubResource("SpriteFrames_anf7l")
 autoplay = "default"
 frame_progress = 0.620331
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.25, 22.5)
+position = Vector2(0.558481, 27.3984)
 shape = SubResource("CircleShape2D_snm2j")
