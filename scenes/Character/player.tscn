@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://der2vkgodjguf"]
+[gd_scene load_steps=21 format=3 uid="uid://der2vkgodjguf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_g1jfu"]
 [ext_resource type="PackedScene" uid="uid://buasjj12oodhn" path="res://scenes/Character/gun.tscn" id="3_ai8wl"]
@@ -40,6 +40,30 @@ region = Rect2(665, 0, 95, 95)
 atlas = ExtResource("3_gsdoy")
 region = Rect2(760, 0, 95, 95)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gankm"]
+atlas = ExtResource("3_gsdoy")
+region = Rect2(0, 190, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqijp"]
+atlas = ExtResource("3_gsdoy")
+region = Rect2(95, 190, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_114bf"]
+atlas = ExtResource("3_gsdoy")
+region = Rect2(0, 95, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq4al"]
+atlas = ExtResource("3_gsdoy")
+region = Rect2(95, 95, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frjnj"]
+atlas = ExtResource("3_gsdoy")
+region = Rect2(190, 95, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8h1u"]
+atlas = ExtResource("3_gsdoy")
+region = Rect2(285, 95, 95, 95)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_anf7l"]
 animations = [{
 "frames": [{
@@ -73,6 +97,34 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gankm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqijp")
+}],
+"loop": true,
+"name": &"jumping",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_114bf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pq4al")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frjnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8h1u")
+}],
+"loop": true,
+"name": &"run",
+"speed": 9.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_snm2j"]
@@ -91,8 +143,9 @@ position = Vector2(0.590419, 27.3561)
 position = Vector2(0.57445, 26.7497)
 scale = Vector2(0.0783863, 0.0783863)
 sprite_frames = SubResource("SpriteFrames_anf7l")
+animation = &"run"
 autoplay = "default"
-frame_progress = 0.620331
+frame_progress = 0.539517
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.558481, 27.3984)

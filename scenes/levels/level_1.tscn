@@ -966,12 +966,14 @@ unique_name_in_owner = true
 script = ExtResource("5_kax5n")
 
 [node name="PlayerBottles" type="Label" parent="GameManager"]
-offset_left = -105.0
-offset_top = -176.0
-offset_right = -3.0
-offset_bottom = -153.0
+offset_left = -66.0
+offset_top = -95.0
+offset_right = 36.0
+offset_bottom = -72.0
 text = "Botellas: X"
 metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_gmk1m")]
 
@@ -1002,4 +1004,4 @@ position = Vector2(-473, 67)
 position = Vector2(503, 104)
 
 [node name="Bubble_bottle" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
-position = Vector2(162, -209)
+position = Vector2(149, -95)
