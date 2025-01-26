@@ -1007,7 +1007,43 @@ position = Vector2(-473, 67)
 position = Vector2(503, 104)
 
 [node name="Bubble_bottle" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
-position = Vector2(149, -95)
+position = Vector2(65, -77)
+
+[node name="Bubble_bottle6" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
+position = Vector2(86, -77)
+
+[node name="Bubble_bottle7" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
+position = Vector2(106, -76)
+
+[node name="Bubble_bottle8" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
+position = Vector2(123, -76)
+
+[node name="Bubble_bottle9" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
+position = Vector2(149, -78)
+
+[node name="Bubble_bottle10" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
+position = Vector2(169, -78)
+
+[node name="Bubble_bottle11" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
+position = Vector2(209, -77)
+
+[node name="Bubble_bottle12" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
+position = Vector2(238, -80)
+
+[node name="Bubble_bottle13" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
+position = Vector2(267, -106)
+
+[node name="Bubble_bottle14" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
+position = Vector2(189, -121)
+
+[node name="Bubble_bottle15" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
+position = Vector2(123, -118)
+
+[node name="Bubble_bottle16" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
+position = Vector2(73, -113)
+
+[node name="Bubble_bottle17" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
+position = Vector2(73, -113)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

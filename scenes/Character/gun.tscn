@@ -14,5 +14,7 @@ scale = Vector2(0.127918, 0.127918)
 texture = ExtResource("2_hi1qd")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(14, 0)
+position = Vector2(6, 0)
 rotation = -1.57079
+
+[node name="Timer" type="Timer" parent="."]

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 200.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 150.0
+const JUMP_VELOCITY = -300.0
 const FLOOR_DETECTION_DISTANCE = 10.0  # Distance to detect if almost touching the floor
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -51,9 +51,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("fire"):
 		var player_shots = game_manager.bubble_bottles
 
-		if(player_shots > 0):
+		if (player_shots > 0  and !is_on_floor()):
 			var mouse_position = get_global_mouse_position()
 			var direction_vector = (global_position - mouse_position).normalized()
-			velocity = direction_vector * SPEED * 1.5
+			velocity = direction_vector * SPEED * 2.2
 
 	move_and_slide()

@@ -1,22 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5xld07druqfy"]
+[gd_scene load_steps=5 format=3 uid="uid://b5xld07druqfy"]
 
 [ext_resource type="Script" path="res://scripts/bullet.gd" id="1_kin24"]
-[ext_resource type="Texture2D" uid="uid://cc0s8npvk2rln" path="res://assets/sprites/bubble_2.png" id="2_qvwlk"]
-[ext_resource type="Texture2D" uid="uid://tdgwmgwwm8di" path="res://assets/sprites/bubble_4_grayscale.png" id="2_rm4g2"]
+[ext_resource type="Texture2D" uid="uid://b4jncorrl1ryp" path="res://assets/sprites/bubbles/bubbles01.png" id="2_6f75m"]
+[ext_resource type="Texture2D" uid="uid://diepemg43by3o" path="res://assets/sprites/bubbles/bubbles02.png" id="3_7i60o"]
+[ext_resource type="Texture2D" uid="uid://qshu0sxv0qp4" path="res://assets/sprites/bubbles/bubbles03.png" id="4_i070e"]
 
 [node name="Bullet" type="Node2D"]
 script = ExtResource("1_kin24")
 
-[node name="BUBBLE_2" type="Sprite2D" parent="."]
-position = Vector2(2.38419e-07, 2.38419e-07)
-texture = ExtResource("2_rm4g2")
-
-[node name="BUBBLE_1" type="Sprite2D" parent="."]
-scale = Vector2(3, 3)
-texture = ExtResource("2_qvwlk")
-
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+visible = false
 position = Vector2(-2, -3)
 scale = Vector2(4.15, 3.7)
+
+[node name="BUBBLE_1" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("2_6f75m")
+
+[node name="BUBBLE_2" type="Sprite2D" parent="."]
+scale = Vector2(1.125, 1.125)
+texture = ExtResource("3_7i60o")
+
+[node name="BUBBLE_3" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("4_i070e")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
