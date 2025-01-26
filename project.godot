@@ -15,9 +15,17 @@ run/main_scene="res://scenes/levels/level_1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalVariables="*res://scripts/global/global_variables.gd"
+
 [display]
 
 window/stretch/mode="canvas_items"
+
+[editor]
+
+version_control/autoload_on_startup=true
 
 [input]
 

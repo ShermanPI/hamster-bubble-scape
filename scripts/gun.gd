@@ -1,8 +1,8 @@
 extends Node2D
 
 const BULLET = preload("res://scenes/Character/bullet.tscn")
+
 @onready var muzzle: Marker2D = $Marker2D
-@onready var game_manager = get_node("/root/Level2/GameManager")
 
 var total_bullets = 12     # Número total de balas a disparar
 var spread_angle = 65     # Apertura del tiro en grados (puedes modificarla)
@@ -11,6 +11,8 @@ var initial_direction: Vector2 = Vector2.ZERO  # Dirección inicial al disparar
 var is_shooting = false   # Bandera para controlar si estamos disparando
 
 func _process(delta: float) -> void:
+	var game_manager = get_node(GlobalVariables.levelString)
+	
 	look_at(get_global_mouse_position())
 
 	# Verifica si se presionó el botón de disparo, si no se está disparando y si hay balas disponibles
@@ -22,6 +24,8 @@ func _process(delta: float) -> void:
 		game_manager.remove_bubble_bottle()
 
 func shoot():
+	var game_manager = get_node(GlobalVariables.levelString)
+	
 	# Verifica nuevamente si hay balas disponibles antes de disparar
 	if game_manager.bubble_bottles >= 0:
 		# Dispara todas las balas con un pequeño retraso aleatorio

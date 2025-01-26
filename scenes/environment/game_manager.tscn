@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdefq2k8vt2jx"]
+
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_28lov"]
+[ext_resource type="PackedScene" uid="uid://ckdn4lavkpdeb" path="res://scenes/UI/bottles_container.tscn" id="2_im1ly"]
+
+[node name="GameManager" type="Node"]
+unique_name_in_owner = true
+script = ExtResource("1_28lov")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="BottlesContainer" parent="CanvasLayer2" instance=ExtResource("2_im1ly")]
+offset_right = 0.0
+offset_bottom = 0.0
+metadata/_edit_use_anchors_ = true
