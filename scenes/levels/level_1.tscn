@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=4 uid="uid://bkls4mtfw6tkb"]
+[gd_scene load_steps=12 format=4 uid="uid://bkls4mtfw6tkb"]
 
 [ext_resource type="Texture2D" uid="uid://bktmsiewasgu" path="res://assets/level01/level01.png" id="1_f5b7i"]
 [ext_resource type="PackedScene" uid="uid://der2vkgodjguf" path="res://scenes/Character/player.tscn" id="1_gmk1m"]
 [ext_resource type="PackedScene" uid="uid://cxok1hux3o27b" path="res://scenes/environment/bubble_bottle.tscn" id="3_m6cbo"]
 [ext_resource type="PackedScene" uid="uid://dddfrgxvf2ovj" path="res://scenes/environment/killzone.tscn" id="4_j355l"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="5_kax5n"]
+[ext_resource type="Texture2D" uid="uid://dm2vswp26m4c8" path="res://assets/sprites/FreeCuteTileset/BG1.png" id="6_ncikr"]
+[ext_resource type="Texture2D" uid="uid://dh6rro5i2mp1l" path="res://assets/sprites/FreeCuteTileset/BG2.png" id="7_4dsds"]
+[ext_resource type="Texture2D" uid="uid://bf2ihdrwf258l" path="res://assets/sprites/FreeCuteTileset/BG3.png" id="8_b44xp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_llkwi"]
 texture = ExtResource("1_f5b7i")
@@ -978,7 +981,7 @@ metadata/_edit_use_anchors_ = true
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_gmk1m")]
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(0.590419, 18.8934)
+position = Vector2(0.590419, 27.3561)
 zoom = Vector2(3, 3)
 limit_bottom = 200
 position_smoothing_enabled = true
@@ -1005,3 +1008,36 @@ position = Vector2(503, 104)
 
 [node name="Bubble_bottle" parent="Bubble_bottles" instance=ExtResource("3_m6cbo")]
 position = Vector2(149, -95)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="sky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/sky"]
+position = Vector2(0, -9)
+scale = Vector2(1.19792, 1.19792)
+texture = ExtResource("6_ncikr")
+centered = false
+
+[node name="clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -63)
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(383, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/clouds"]
+position = Vector2(0, -8)
+scale = Vector2(1.19792, 1.19792)
+texture = ExtResource("7_4dsds")
+centered = false
+
+[node name="mountains" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -111)
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(383, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/mountains"]
+position = Vector2(0, -8)
+scale = Vector2(1.19792, 1.19792)
+texture = ExtResource("8_b44xp")
+centered = false

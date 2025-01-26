@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			animated_sprite.play("run")
 	else:
-		if velocity.y < 0:
+		if velocity.y > 0:
 			animated_sprite.play("jumping")  # Rising (jumping up)
 		else:
 			animated_sprite.play("falling")  # Falling or almost touching the floor
@@ -54,6 +54,6 @@ func _physics_process(delta: float) -> void:
 		if(player_shots > 0):
 			var mouse_position = get_global_mouse_position()
 			var direction_vector = (global_position - mouse_position).normalized()
-			velocity = direction_vector * SPEED * 3
+			velocity = direction_vector * SPEED * 1.5
 
 	move_and_slide()
