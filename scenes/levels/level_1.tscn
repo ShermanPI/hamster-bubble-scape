@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://bkls4mtfw6tkb"]
+[gd_scene load_steps=13 format=4 uid="uid://bkls4mtfw6tkb"]
 
 [ext_resource type="Texture2D" uid="uid://bktmsiewasgu" path="res://assets/level01/level01.png" id="1_f5b7i"]
 [ext_resource type="PackedScene" uid="uid://der2vkgodjguf" path="res://scenes/Character/player.tscn" id="1_gmk1m"]
 [ext_resource type="PackedScene" uid="uid://cxok1hux3o27b" path="res://scenes/environment/bubble_bottle.tscn" id="3_m6cbo"]
+[ext_resource type="PackedScene" uid="uid://ckdn4lavkpdeb" path="res://scenes/UI/bottles_container.tscn" id="3_sbehg"]
 [ext_resource type="PackedScene" uid="uid://dddfrgxvf2ovj" path="res://scenes/environment/killzone.tscn" id="4_j355l"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="5_kax5n"]
 [ext_resource type="Texture2D" uid="uid://dm2vswp26m4c8" path="res://assets/sprites/FreeCuteTileset/BG1.png" id="6_ncikr"]
@@ -968,15 +969,15 @@ tile_set = SubResource("TileSet_qb1sv")
 unique_name_in_owner = true
 script = ExtResource("5_kax5n")
 
-[node name="PlayerBottles" type="Label" parent="GameManager"]
-offset_left = -66.0
-offset_top = -95.0
-offset_right = 36.0
-offset_bottom = -72.0
-text = "Botellas: X"
-metadata/_edit_use_anchors_ = true
-
 [node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
+
+[node name="BottlesContainer" parent="GameManager/CanvasLayer" instance=ExtResource("3_sbehg")]
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="PlayerBottles" type="Label" parent="GameManager"]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_gmk1m")]
 

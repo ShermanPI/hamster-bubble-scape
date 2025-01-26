@@ -1,0 +1,121 @@
+[gd_scene load_steps=17 format=3 uid="uid://b0xcerdb1a8s5"]
+
+[ext_resource type="Script" path="res://scripts/bottle_gui.gd" id="1_excb8"]
+[ext_resource type="Texture2D" uid="uid://b1o3yjbpdtvv8" path="res://assets/sprites/bubble_bottle/bubble_bottle.png" id="1_wat4c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30m2c"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpnbc"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca5kq"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scewx"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5otn"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm2rm"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08xdt"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_us86d"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76aqd"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(128, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrdny"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(144, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73178"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(160, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4mg7"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(176, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyi5g"]
+atlas = ExtResource("1_wat4c")
+region = Rect2(192, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qops4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30m2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpnbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ca5kq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scewx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5otn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm2rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08xdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_us86d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76aqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrdny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73178")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4mg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyi5g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="BottleGui" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(30, 64)
+offset_right = 30.0
+offset_bottom = 64.0
+script = ExtResource("1_excb8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_qops4")
+autoplay = "default"
+centered = false

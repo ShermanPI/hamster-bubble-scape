@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckdn4lavkpdeb"]
+
+[ext_resource type="Script" path="res://scripts/bottles_container.gd" id="1_b7pti"]
+
+[node name="BottlesContainer" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 16
+script = ExtResource("1_b7pti")
