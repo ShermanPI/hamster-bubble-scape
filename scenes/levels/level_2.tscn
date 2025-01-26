@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="5_3c67w"]
 [ext_resource type="PackedScene" uid="uid://ckdn4lavkpdeb" path="res://scenes/UI/bottles_container.tscn" id="6_8dg2v"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3mgk"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fg74b"]
 texture = ExtResource("1_wef5c")
 18:6/0 = 0
 19:6/0 = 0
@@ -284,7 +284,7 @@ texture = ExtResource("1_wef5c")
 
 [sub_resource type="TileSet" id="TileSet_k8c04"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_i3mgk")
+sources/0 = SubResource("TileSetAtlasSource_fg74b")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y3boy"]
 
@@ -304,6 +304,7 @@ script = ExtResource("5_3c67w")
 [node name="BottlesContainer" parent="GameManager/CanvasLayer" instance=ExtResource("6_8dg2v")]
 offset_right = 0.0
 offset_bottom = 0.0
+metadata/_edit_use_anchors_ = true
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_4wipl")]
 position = Vector2(32, -101)

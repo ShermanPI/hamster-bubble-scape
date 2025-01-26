@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://jp7knesllrsj" path="res://assets/levels/level01.png" id="1_f5b7i"]
 [ext_resource type="PackedScene" uid="uid://der2vkgodjguf" path="res://scenes/Character/player.tscn" id="1_gmk1m"]
-[ext_resource type="Script" path="res://scripts/levels/level_1.gd" id="1_q8seb"]
+[ext_resource type="Script" path="res://scenes/levels/scripts/level_1.gd" id="1_q8seb"]
 [ext_resource type="PackedScene" uid="uid://ckdn4lavkpdeb" path="res://scenes/UI/bottles_container.tscn" id="3_sbehg"]
 [ext_resource type="PackedScene" uid="uid://dddfrgxvf2ovj" path="res://scenes/environment/killzone.tscn" id="4_j355l"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="5_kax5n"]
