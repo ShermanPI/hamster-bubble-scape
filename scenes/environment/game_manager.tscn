@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdefq2k8vt2jx"]
+[gd_scene load_steps=3 format=3 uid="uid://cj42ct2a1dlsa"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_28lov"]
 [ext_resource type="PackedScene" uid="uid://ckdn4lavkpdeb" path="res://scenes/UI/bottles_container.tscn" id="2_im1ly"]
