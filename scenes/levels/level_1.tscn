@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bkls4mtfw6tkb"]
+[gd_scene load_steps=14 format=4 uid="uid://bkls4mtfw6tkb"]
 
 [ext_resource type="Texture2D" uid="uid://jp7knesllrsj" path="res://assets/levels/level01.png" id="1_f5b7i"]
 [ext_resource type="PackedScene" uid="uid://der2vkgodjguf" path="res://scenes/Character/player.tscn" id="1_gmk1m"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dddfrgxvf2ovj" path="res://scenes/environment/killzone.tscn" id="4_j355l"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="5_kax5n"]
 [ext_resource type="PackedScene" uid="uid://qntu1dqfghtu" path="res://scenes/environment/parallax_background.tscn" id="6_bcyb7"]
+[ext_resource type="PackedScene" uid="uid://b04fkl2177kom" path="res://scenes/environment/next_level.tscn" id="8_qqm04"]
+[ext_resource type="FontFile" uid="uid://2xhdwf3ao5yb" path="res://assets/fonts/PixelOperator8.ttf" id="9_qgjbn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2lyho"]
 texture = ExtResource("1_f5b7i")
@@ -387,7 +389,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_gmk1m")]
-position = Vector2(32, -101)
+position = Vector2(31, -112)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0.590419, 27.3561)
@@ -410,3 +412,28 @@ shape = SubResource("WorldBoundaryShape2D_n5bhh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 rotation = 1.5708
 shape = SubResource("WorldBoundaryShape2D_0026y")
+
+[node name="NextLevel" parent="." instance=ExtResource("8_qqm04")]
+position = Vector2(590, 13)
+collision_mask = 2
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 227.0
+offset_top = -45.0
+offset_right = 485.0
+offset_bottom = -21.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_qgjbn")
+theme_override_font_sizes/font_size = 16
+text = "Space to jump"
+
+[node name="Label2" type="Label" parent="."]
+texture_filter = 1
+offset_left = 16.0
+offset_right = 274.0
+offset_bottom = 24.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_qgjbn")
+theme_override_font_sizes/font_size = 8
+text = "Level 1"
