@@ -1,43 +1,78 @@
-[gd_scene load_steps=10 format=3 uid="uid://der2vkgodjguf"]
+[gd_scene load_steps=15 format=3 uid="uid://der2vkgodjguf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_g1jfu"]
-[ext_resource type="Texture2D" uid="uid://cm6hxfh67mp1o" path="res://assets/sprites/hamster/hamster_prota_outlined.png" id="2_241fx"]
 [ext_resource type="PackedScene" uid="uid://buasjj12oodhn" path="res://scenes/Character/gun.tscn" id="3_ai8wl"]
+[ext_resource type="Texture2D" uid="uid://d2d3copo0k0qm" path="res://assets/hamster_prota_2.0/hamster_prota_2.0.png" id="3_gsdoy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sqpgm"]
-atlas = ExtResource("2_241fx")
+[sub_resource type="AtlasTexture" id="AtlasTexture_87add"]
+atlas = ExtResource("3_gsdoy")
 region = Rect2(0, 0, 95, 95)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ktlcn"]
-atlas = ExtResource("2_241fx")
+[sub_resource type="AtlasTexture" id="AtlasTexture_mh8e2"]
+atlas = ExtResource("3_gsdoy")
 region = Rect2(95, 0, 95, 95)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_43ljv"]
-atlas = ExtResource("2_241fx")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qx8o"]
+atlas = ExtResource("3_gsdoy")
 region = Rect2(190, 0, 95, 95)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t0tdi"]
-atlas = ExtResource("2_241fx")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvkwk"]
+atlas = ExtResource("3_gsdoy")
 region = Rect2(285, 0, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48680"]
+atlas = ExtResource("3_gsdoy")
+region = Rect2(380, 0, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8sbm"]
+atlas = ExtResource("3_gsdoy")
+region = Rect2(475, 0, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyrhp"]
+atlas = ExtResource("3_gsdoy")
+region = Rect2(570, 0, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5p62f"]
+atlas = ExtResource("3_gsdoy")
+region = Rect2(665, 0, 95, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7man"]
+atlas = ExtResource("3_gsdoy")
+region = Rect2(760, 0, 95, 95)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_anf7l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sqpgm")
+"texture": SubResource("AtlasTexture_87add")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ktlcn")
+"texture": SubResource("AtlasTexture_mh8e2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_43ljv")
+"texture": SubResource("AtlasTexture_2qx8o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t0tdi")
+"texture": SubResource("AtlasTexture_xvkwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48680")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8sbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyrhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5p62f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7man")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 20.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_snm2j"]
